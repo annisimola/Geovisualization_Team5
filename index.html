@@ -64,7 +64,6 @@
         var layer_OpenStreetMap_0 = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             pane: 'pane_OpenStreetMap_0',
             opacity: 1.0,
-            attribution: '<a href="">© OpenStreetMap contributors</a>',
             minZoom: 5,
             maxZoom: 20,
             minNativeZoom: 0,
@@ -73,7 +72,6 @@
 		layer_Google_sat = L.tileLayer('https://www.google.cn/maps/vt?lyrs=s@189&gl=cn&x={x}&y={y}&z={z}', {
 		minZoom: 5,
 		maxZoom: 20,
-		attribution: '<a href="https://www.google.com/maps">© Google</a>'
 		});
         map.addLayer(layer_OpenStreetMap_0, layer_Google_sat);
 		
@@ -136,7 +134,7 @@
         map.getPane('pane_Naturereserves_3').style.zIndex = 403;
         map.getPane('pane_Naturereserves_3').style['mix-blend-mode'] = 'normal';
         var layer_Naturereserves_3 = new L.geoJson(json_Naturereserves_3, {
-            attribution: '<a>© Finnish Environment Institute</a>',
+            attribution: '<a>© Finnish Environment Institute, © Finnish Transport Infrastructure Agency, © National Land Survey of Finland, © OpenStreetMap contributors, © Google</a>',
             interactive: true,
             dataVar: 'json_Naturereserves_3',
             layerName: 'layer_Naturereserves_3',
